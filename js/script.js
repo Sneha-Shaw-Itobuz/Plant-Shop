@@ -1,6 +1,7 @@
 const menu = document.getElementById("menu");
 const navList = document.getElementById("nav-list");
 
+//navbar for mobile
 menu.addEventListener("click", () => {
   console.log("hi");
   if (navList.classList.contains("hide")) {
@@ -12,6 +13,7 @@ menu.addEventListener("click", () => {
   }
 });
 
+//top section carousel made by Arpana and Sneha
 var swiper = new Swiper(".topSwiper", {
   pagination: {
     el: ".swiper-pagination",
@@ -22,7 +24,26 @@ var swiper = new Swiper(".topSwiper", {
     prevEl: ".swiper-button-prev",
   },
 });
+// top section ends
 
+//collection section made by Ashutosh and Deepak
+var swiper = new Swiper(".plantSwiper", {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  centeredSlides: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 3,
+    },
+  },
+});
+//collection ends
+
+//client section made by Satyabrata and Sabir
 var swiper = new Swiper(".clientSwiper", {
   slidesPerView: 1,
   spaceBetween: 20,
@@ -39,21 +60,4 @@ var swiper = new Swiper(".clientSwiper", {
     },
   },
 });
-
-var swiper = new Swiper(".plantSwiper", {
-  slidesPerView: 1,
-  spaceBetween: 20,
-  centeredSlides: true,
-  // freeMode: true,
-  // loop: true,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  breakpoints: {
-    768: {
-      slidesPerView: 3,
-      // spaceBetween: 30,
-    },
-  },
-});
+//client section ends
